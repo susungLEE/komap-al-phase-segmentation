@@ -1,0 +1,56 @@
+2026-10-14 18:42:36 | NVIDIA GeForce RTX 4070 | Python 3.11.17 | PyTorch 2.11.0+cu128
+valid 20, test 10 | models 10 (size 7 + feature 3) | tile 1024, TTA 8
+  P3_long150_seed123     [size]    val mIoU 80.68  (1.0 min)
+  N_long100              [size]    val mIoU 80.35  (1.9 min)
+  P_long150              [size]    val mIoU 80.05  (2.7 min)
+  P4_long150_seed2024    [size]    val mIoU 80.14  (3.6 min)
+  L768_s42               [size]    val mIoU 80.31  (4.6 min)
+  L768_s7                [size]    val mIoU 80.57  (5.7 min)
+  L768_s123              [size]    val mIoU 80.58  (6.6 min)
+  scale (target 7.99px) valid: 2.21, 2.74, 3.08, 2.32, 2.88, 2.91, 1.72, 1.50, 1.83, 2.04, 1.50, 1.66, 2.94, 3.30, 3.52, 3.32, 2.89, 2.53, 3.33, 1.73
+  scale (target 7.99px) test : 2.77, 2.49, 2.38, 2.15, 2.24, 2.56, 3.36, 1.74, 3.30, 3.21
+  S768_s42               [feature] val mIoU 79.83  (7.7 min)
+  S768_s7                [feature] val mIoU 80.08  (8.4 min)
+  S768_s123              [feature] val mIoU 80.01  (9.1 min)
+
+Ensemble val mIoU 80.93 | Al 94.3 / Eutectic Si 62.4 / Primary Si 91.6 / Al3Ni 76.8
+  per image:
+    A117_step4_sample2_mask.png    87.40
+    A11_step1_sample4_mask.png     78.96
+    A11_step2_sample4_mask.png     77.58
+    A125_step1_sample4_mask.png    79.33
+    A153_step3_sample3_mask.png    71.42
+    A170_step4_sample3_mask.png    88.37
+    A181_step1_sample1_mask.png    80.34
+    A186_step2_sample2_mask.png    81.27
+    A191_step4_sample3_mask.png    83.49
+    A40_step3_sample3_mask.png     83.06
+    A42_step2_sample4_mask.png     83.82
+    A44_step4_sample3_mask.png     89.73
+    A55_step2_sample1_mask.png     81.54
+    A59_step3_sample1_mask.png     82.72
+    A63_step1_sample4_mask.png     84.23
+    A67_step1_sample1_mask.png     75.93
+    A71_step2_sample1_mask.png     63.90
+    A72_step4_sample4_mask.png     86.65
+    A74_step3_sample4_mask.png     76.31
+    A7_step1_sample4_mask.png      82.48
+
+  confusion matrix (%, row = GT, col = pred):
+                            Al  Eutectic Si   Primary Si        Al3Ni
+    Al                   97.47         0.51         0.11         1.90
+    Eutectic Si           7.52        78.82         3.60        10.07
+    Primary Si            1.49         2.45        94.60         1.47
+    Al3Ni                 5.40         5.22         0.51        88.87
+
+  precision / recall / F1 (%):
+    Al            P  96.95 | R  97.47 | F1  97.21
+    Eutectic Si   P  78.39 | R  78.82 | F1  78.60
+    Primary Si    P  95.51 | R  94.60 | F1  95.05
+    Al3Ni         P  90.04 | R  88.87 | F1  89.45
+    pixel accuracy 93.93%
+  saved: valid_pred/, valid_compare/, confusion_matrix.png, *_grid.png
+
+test masks 10 -> D:\komap\komap_submission\submission_reproduced  (9.4 min)
+agreement with D:\komap\komap_submission\_submitted_masks: mean 100.000% (min 100.000%)
+saved: metrics.json, metrics.txt

@@ -1,0 +1,177 @@
+{
+  "run_time": "2026-10-14 18:42:39",
+  "device": "NVIDIA GeForce RTX 4070",
+  "settings": {
+    "tile": 1024,
+    "tta": 8,
+    "small_w": 800,
+    "small_scales": [
+      2,
+      3,
+      4
+    ],
+    "n_models": 10,
+    "size_models": [
+      "P3_long150_seed123",
+      "N_long100",
+      "P_long150",
+      "P4_long150_seed2024",
+      "L768_s42",
+      "L768_s7",
+      "L768_s123"
+    ],
+    "feature_models": [
+      "S768_s42",
+      "S768_s7",
+      "S768_s123"
+    ]
+  },
+  "single_model_val_miou": {
+    "P3_long150_seed123": 80.6787,
+    "N_long100": 80.3477,
+    "P_long150": 80.0491,
+    "P4_long150_seed2024": 80.1379,
+    "L768_s42": 80.3101,
+    "L768_s7": 80.5677,
+    "L768_s123": 80.5775,
+    "S768_s42": 79.8282,
+    "S768_s7": 80.0833,
+    "S768_s123": 80.0139
+  },
+  "feature_scale": {
+    "target_thickness_px": 7.988194617192036,
+    "s_min": 1.5,
+    "s_max": 4.0,
+    "valid": {
+      "A117_step4_sample2_mask.png": 2.212,
+      "A11_step1_sample4_mask.png": 2.737,
+      "A11_step2_sample4_mask.png": 3.08,
+      "A125_step1_sample4_mask.png": 2.315,
+      "A153_step3_sample3_mask.png": 2.883,
+      "A170_step4_sample3_mask.png": 2.912,
+      "A181_step1_sample1_mask.png": 1.718,
+      "A186_step2_sample2_mask.png": 1.5,
+      "A191_step4_sample3_mask.png": 1.832,
+      "A40_step3_sample3_mask.png": 2.042,
+      "A42_step2_sample4_mask.png": 1.5,
+      "A44_step4_sample3_mask.png": 1.664,
+      "A55_step2_sample1_mask.png": 2.943,
+      "A59_step3_sample1_mask.png": 3.3,
+      "A63_step1_sample4_mask.png": 3.519,
+      "A67_step1_sample1_mask.png": 3.315,
+      "A71_step2_sample1_mask.png": 2.886,
+      "A72_step4_sample4_mask.png": 2.529,
+      "A74_step3_sample4_mask.png": 3.334,
+      "A7_step1_sample4_mask.png": 1.729
+    },
+    "test": {
+      "A107_step1_sample3_image.png": 2.767,
+      "A122_step4_sample1_image.png": 2.489,
+      "A124_step4_sample3_image.png": 2.383,
+      "A127_step3_sample2_image.png": 2.152,
+      "A133_step4_sample1_image.png": 2.236,
+      "A167_step3_sample3_image.png": 2.564,
+      "A38_step2_sample2_image.png": 3.357,
+      "A51_step3_sample3_image.png": 1.74,
+      "A63_step2_sample3_image.png": 3.3,
+      "A87_step1_sample4_image.png": 3.212
+    }
+  },
+  "ensemble_val_miou": 80.9278,
+  "ensemble_val_class_iou": {
+    "Al": 94.2835,
+    "Eutectic Si": 62.399,
+    "Primary Si": 91.5725,
+    "Al3Ni": 76.84
+  },
+  "ensemble_val_miou_per_image": {
+    "A117_step4_sample2_mask.png": 87.4003,
+    "A11_step1_sample4_mask.png": 78.9605,
+    "A11_step2_sample4_mask.png": 77.5789,
+    "A125_step1_sample4_mask.png": 79.3282,
+    "A153_step3_sample3_mask.png": 71.4247,
+    "A170_step4_sample3_mask.png": 88.3681,
+    "A181_step1_sample1_mask.png": 80.3405,
+    "A186_step2_sample2_mask.png": 81.2746,
+    "A191_step4_sample3_mask.png": 83.4893,
+    "A40_step3_sample3_mask.png": 83.0632,
+    "A42_step2_sample4_mask.png": 83.8224,
+    "A44_step4_sample3_mask.png": 89.7329,
+    "A55_step2_sample1_mask.png": 81.5435,
+    "A59_step3_sample1_mask.png": 82.7196,
+    "A63_step1_sample4_mask.png": 84.2259,
+    "A67_step1_sample1_mask.png": 75.9296,
+    "A71_step2_sample1_mask.png": 63.9015,
+    "A72_step4_sample4_mask.png": 86.6536,
+    "A74_step3_sample4_mask.png": 76.3147,
+    "A7_step1_sample4_mask.png": 82.4849
+  },
+  "confusion_matrix_pct": {
+    "Al": {
+      "Al": 97.474,
+      "Eutectic Si": 0.51,
+      "Primary Si": 0.115,
+      "Al3Ni": 1.901
+    },
+    "Eutectic Si": {
+      "Al": 7.517,
+      "Eutectic Si": 78.819,
+      "Primary Si": 3.596,
+      "Al3Ni": 10.068
+    },
+    "Primary Si": {
+      "Al": 1.486,
+      "Eutectic Si": 2.448,
+      "Primary Si": 94.597,
+      "Al3Ni": 1.47
+    },
+    "Al3Ni": {
+      "Al": 5.405,
+      "Eutectic Si": 5.215,
+      "Primary Si": 0.505,
+      "Al3Ni": 88.875
+    }
+  },
+  "precision_recall_f1_pct": {
+    "Al": {
+      "precision": 96.952,
+      "recall": 97.474,
+      "f1": 97.212
+    },
+    "Eutectic Si": {
+      "precision": 78.388,
+      "recall": 78.819,
+      "f1": 78.603
+    },
+    "Primary Si": {
+      "precision": 95.509,
+      "recall": 94.597,
+      "f1": 95.051
+    },
+    "Al3Ni": {
+      "precision": 90.038,
+      "recall": 88.875,
+      "f1": 89.453
+    }
+  },
+  "pixel_accuracy_pct": 93.934,
+  "test_masks_saved": 10,
+  "elapsed_min": 9.41,
+  "compare": {
+    "target": "D:\\komap\\komap_submission\\_submitted_masks",
+    "mean_agreement_pct": 100.0,
+    "min_agreement_pct": 100.0,
+    "per_image": {
+      "A107_step1_sample3_mask.png": 100.0,
+      "A122_step4_sample1_mask.png": 100.0,
+      "A124_step4_sample3_mask.png": 100.0,
+      "A127_step3_sample2_mask.png": 100.0,
+      "A133_step4_sample1_mask.png": 100.0,
+      "A167_step3_sample3_mask.png": 100.0,
+      "A38_step2_sample2_mask.png": 100.0,
+      "A51_step3_sample3_mask.png": 100.0,
+      "A63_step2_sample3_mask.png": 100.0,
+      "A87_step1_sample4_mask.png": 100.0
+    }
+  }
+}
